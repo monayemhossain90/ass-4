@@ -1,22 +1,19 @@
 {
   "name": "assignment-4",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-
-    "start:prod": "node ./dist/server.js",
-    "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "node ./dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "build": "tsc",
     "lint": "eslint src --ignore-path .eslintignore --ext .ts",
     "lint:fix": "npx eslint src --fix",
-    "prettier": "prettier --ignore-path .gitignore --write \"./src/**/*.+(js|ts|json)\"",
-    "prettier:fix": "npx prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/cookie-parser": "^1.4.6",
@@ -26,6 +23,7 @@
     "@types/mongoose": "^5.11.97",
     "@typescript-eslint/eslint-plugin": "^6.13.2",
     "@typescript-eslint/parser": "^6.13.2",
+    "bcrypt": "^5.1.1",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "mongoose": "^8.0.3",
@@ -35,7 +33,6 @@
   },
   "dependencies": {
     "argon2": "^0.31.2",
-    "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",

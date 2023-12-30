@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
+//  eslint-disable @typescript-eslint/no-this-alias */
 
 import mongoose, { Schema } from 'mongoose';
 import { PasswordHistory, TUser } from './user.interface';

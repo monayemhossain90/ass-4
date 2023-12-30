@@ -5,9 +5,10 @@ import serverResponse from '../../ulitities/serverResponse';
 import httpStatus from 'http-status';
 import { UserServices } from './user.service';
 import wrapAsync from '../../ulitities/wrapAsync';
+import { Request,Response } from 'express';
 
 
-const createUser = wrapAsync(async (req, res) => {
+const createUser = wrapAsync(async (req:Request, res:Response) => {
   const userData: TUser = req.body;
   const result = await UserServices.createUserIntoDB(userData);
   serverResponse(res, {
