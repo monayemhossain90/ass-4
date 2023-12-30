@@ -40,16 +40,16 @@ const loginUser = async (payload: TUserLogin) => {
   if (!user) {
     throw new appError(httpStatus.BAD_REQUEST, 'The User is not Found!!');
   }
-  console.log(user);
+
   // Check if both username and password are valid
   if (user?.username !== payload?.username) {
     throw new appError(httpStatus.BAD_REQUEST, 'Username does not Match!!!!!!');
   }
-  if (await User?.isPasswordMatched(payload?.password, user?.password)) {
+  if (!(await User?.isPasswordMatched(payload?.password, user?.password))) {
     throw new Error('Password do not matched!!!!');
   }
 
-  console.log(payload?.password, user?.password);
+
   const jwtPayload = {
     username: user.username,
     role: user.role,
@@ -117,16 +117,10 @@ const changePassword = async (
       data: null,
     };
   }
-  // const isCurrentPasswordValid = await bcrypt.compare(
-  //   payload.currentPassword,
-  //   user?.password,
-  // );
-  // if (!isCurrentPasswordValid) {
-  //   throw new appError(httpStatus.FORBIDDEN, 'Current Password is Incorrect');
-  // }
+
 
   // Verify current password
-  if (await User.isPasswordMatched(payload.currentPassword, user?.password))
+  if (!(await User.isPasswordMatched(payload.currentPassword, user?.password)))
     throw new appError(httpStatus.FORBIDDEN, 'Password do not Matched!!!');
   // Update password history
   const updatedPasswordHistory = [

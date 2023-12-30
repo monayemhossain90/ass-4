@@ -1,32 +1,4 @@
-# Zenith Zephyr 
 
-ZenithZephyr Course Review is a Backend Application with robust data management system, facilitating user, order, and address organization. Powered by MongoDB, it ensures secure data storage and smooth operation, making it an essential tool for efficient application data handling.
-
-## Prerequisites
-
-Before you begin, make sure you have the following installed on your machine:
-
-- Node.js: [Download and Install Node.js](https://nodejs.org/)
-- TypeScript: Install TypeScript globally using the following command:
-
-```bash
-  npm install -g typescript
-```
-
-# Installing
-
-## Clone the repository:
-
-```bash
-  git clone https://github.com/Porgramming-Hero-web-course/l2b2a4-course-review-with-auth-isratjmn
-```
-
-## Navigate to the project directory:
-
-```bash
-  cd zenith-zephyr
-
-```
 
 ## Install the dependencies:
 

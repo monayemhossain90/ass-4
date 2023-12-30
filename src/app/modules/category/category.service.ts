@@ -12,19 +12,12 @@ const getAllCategoriesFromDB = async () => {
   try {
     const categories = await Category.find(
       {},
-      { _id: 1, name: 1, createdBy: 1 },
+      { _id: 1, name: 1, },
     )
-      .populate({
-        path: 'createdBy',
-        select: '_id',
-      })
-      .lean();
-    const mappedCategories = categories.map((category) => ({
-      ...category,
-      createdBy: { adminUserId: category.createdBy._id },
-    }));
+    
+ 
 
-    return mappedCategories;
+    return categories;
   } catch (error) {
     throw new appError(
       httpStatus.BAD_REQUEST,

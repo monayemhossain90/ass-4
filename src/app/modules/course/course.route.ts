@@ -13,6 +13,6 @@ router.post(
   courseControllers.createCourse,
 );
 // Get the Best Course Based on Average Review (Rating)
-router.get('/best', courseControllers.getBestCourse);
+router.get('/best', authType(USER_ROLE.user), courseControllers.getBestCourse);
 
 export const CourseRoute = router;

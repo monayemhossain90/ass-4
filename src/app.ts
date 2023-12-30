@@ -18,7 +18,7 @@ app.use('/api', router);
 const test = (req: Request, res: Response) => {
   res.status(200).json({
     success: true,
-    message: 'Zenith zaphyr Server is saying Hello!!!',
+    message: 'Server is saying Hello!!!',
   });
 };
 
