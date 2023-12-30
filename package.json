@@ -1,7 +1,7 @@
 {
   "name": "assignment-4",
   "version": "1.0.0",
-  "main": "dis/server.js",
+  "main": "dist/server.js",
   "scripts": {
 
     "start:prod": "node ./dist/server.js",
